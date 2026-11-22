@@ -150,8 +150,9 @@ h1, h2, h3, h4, p, figure, blockquote, dl, dd { margin: 0; }
 }
 
 .hero-name {
-  font-family: var(--serif);
-  font-weight: 500;
+  /* sturdier strokes than Bodoni so the capital A reads clearly */
+  font-family: "DM Serif Display", var(--serif);
+  font-weight: 400;
   font-size: clamp(68px, 12.4vw, 196px);
   line-height: .9;
   letter-spacing: -0.035em;
@@ -219,6 +220,7 @@ h1, h2, h3, h4, p, figure, blockquote, dl, dd { margin: 0; }
 }
 .path-head p { max-width: 28em; color: #c9c5cb; }
 .display-light { color: var(--paper); }
+.nowrap { white-space: nowrap; }
 
 .path-steps {
   display: grid;
@@ -371,7 +373,7 @@ h1, h2, h3, h4, p, figure, blockquote, dl, dd { margin: 0; }
 
 .letter-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 240px), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
   gap: 16px;
 }
 .letter-grid .letter {
@@ -442,6 +444,7 @@ h1, h2, h3, h4, p, figure, blockquote, dl, dd { margin: 0; }
   max-width: 7ch;
 }
 .foot-photo { width: clamp(120px, 16vw, 220px); aspect-ratio: 2 / 3; flex: none; }
+.foot-photo img { object-position: 50% 20%; }
 .footer-cols {
   display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px;
   padding: clamp(40px, 5vw, 56px) 0;
