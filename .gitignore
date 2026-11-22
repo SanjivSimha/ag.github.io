@@ -1,3 +1,9 @@
 Portfolio Project.pdf
 .playwright-mcp/
 .DS_Store
+
+# Originals and private files (not needed by the site)
+images/
+IMG_3145.jpeg
+Screenshot*.png
+assets/img/agape-graduation.jpg
